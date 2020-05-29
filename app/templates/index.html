@@ -1,26 +1,14 @@
-<html>
-  <head>
-    <style type="text/css">
-      body {
-        background: black;
-        color: white;
-      }
-      div.container {
-        max-width: 500px;
-        margin: 100px auto;
-        padding: 10px;
-        text-align: center;
-      }
-      h3 {
-        text-transform: uppercase;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h3>Your random pokemon: {{ pokemon.nombre }}</h3>
-      <img src="{{ pokemon.imagen }}" />
-      <p>Tipos: {{ pokemon.tipos }}</p>
-    </div>
-  </body>
-</html>
+{% extends "indexBase.html" %}
+{% block content %}
+  
+  <table>
+    {% for hero in heroes %}
+    <tr>
+        <td>ID: {{hero.id}}</td>
+        <td>HERO: <a href='/hero/{{hero.id}}'>{{hero.name}}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  
+{% endblock %}
+
