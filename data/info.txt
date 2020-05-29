@@ -1,0 +1,9 @@
+este archivo es para que se cree la carpeta "data/" en git
+y mantener la estructura de archivos que necesitara docker,
+estructura de carpetas:
+
+/
+--app/
+----templates/
+----static/
+--data/
