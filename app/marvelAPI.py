@@ -5,7 +5,7 @@ import json
 class marvelAPI():
 
     def __init__(self):    
-        self.TOKEN='2950883621624529'
+        self.TOKEN='10220039278206178'
         self.ENDPOINT = 'https://www.superheroapi.com/api.php/'+self.TOKEN+'/'
         self.ID =0
 
@@ -65,12 +65,3 @@ class marvelAPI():
         return {'group-affiliation':groupAffiliation , 'relatives': relatives}
     
 
-    
-    #types = ','.join(list(filter(lambda x: x != '', [_type.get('typA, {}).get('name', '') for _type in data.get('types', [])])))
-    #ret = {'id':3,'nombre':data.get('name'),'tipos':json.dumps(types),'imagen':data.get('sprites', {}).get('front_default'),}
-    #print(ret)
-    
-    #pokemon, created = marvelheroes1.get_or_create(**ret)
-
-#api=scrapperAPI()
-#print(api.getHero(1)['connections']['group-affiliation'])

@@ -2,10 +2,10 @@
 {% block content %}
   
   <table>
-    {% for hero in heroes %}
+    {% for key,value in heroes.items() %}
     <tr>
-        <td>ID: {{hero.id}}</td>
-        <td>HERO: <a href='/hero/{{hero.id}}'>{{hero.name}}</a></td>
+        <td>ID: {{key}}</td>
+        <td>HERO: <a href='/hero/{{key}}'>{{value}}</a></td>
     </tr>
     {% endfor %}
   </table>

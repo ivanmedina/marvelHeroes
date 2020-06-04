@@ -6,10 +6,10 @@ import time
 
 def main():
 
-    COUNT=10
+    COUNT=735
     TRY=0
-    LIM_TRY=3
-    SEC=5
+    LIM_TRY=10
+    SEC=10
     api=marvelAPI()
     while(TRY<LIM_TRY):
         if (thereConnection()==1):    
@@ -29,9 +29,9 @@ def main():
                                 firstAppearance=raw_hero['biography']['first-appearance'], placeOfBirth=raw_hero['biography']['place-of-birth'])
                                 appearance.create(id=hero.id, **raw_hero['appearance'], eyeColor=raw_hero['appearance']['eye-color'], hairColor=raw_hero['appearance']['hair-color'])
                             print(f"Hero {'Created' if created else 'Existing'}: {raw_hero['name']}")
-                except Exception as e:
-                    print("\n"+"*"*60+"\n\t\t>>>  "+e+" <<<\n\n"+"*"*60+"\n")
-            TRY=3
+                except:
+                    print("ERROR IN GET HERO "+str(i))
+            TRY=LIM_TRY
         else:
             TRY=TRY+1
             print("\n"+("*"*60)+"\n\t\t>>>  ERROR IN CONNECTION ("+str(TRY)+"/"+str(LIM_TRY)+")\n\t\tTRYING IN "+str(SEC)+" SECONDS <<<\n"+"*"*60+"\n")         

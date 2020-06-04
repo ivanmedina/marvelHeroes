@@ -58,7 +58,21 @@ services:
         target: /usr/src/app
     command: ["python", "./appMarvel.py"]
     depends_on:
-     - db
+     - scrapper-marvel
+  redis:
+    image: redis:latest
+    container_name: marvelRedis_E
+    ports:
+      - 6379:6379
+    volumes:
+      - type: bind
+        source: ./config/redis.conf
+        target: /redis.conf
+    command: ["redis-server", "/redis.conf"]
+    networks:
+      - postgresql
+    depends_on:
+     - scrapper-marvel
 networks:
   postgresql:
     driver: bridge
