@@ -33,8 +33,10 @@ Contenedores en docker que consumen y ofrecen servicios
 
 ## Rutas en la aplicacion
 
-'/': Index de la app, lista de indices y heroes de marvel 
+'/': Index de la app, lista de indices y heroes de marvel
+ 
 '/hero/{id heroe}': Muestra una pagina con informacion detallada del heroe
+
 '/test': Ejecuta pruebas entre consultas a la base de datos postgres y la de redis
 
 ## Estructura de directorios
