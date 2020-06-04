@@ -104,11 +104,12 @@ localhost:5000/test encontraras una comparativa entre los tiempos de consulta a 
 
 ## Pruebas
 
-|                                   Tests                                     |
-|-----------------------------------------------------------------------------|
-| ID TO TEST: 732                                                             |
-| RANGE TO TEST: 0-735                                                        |
-| 	                          |   SIN REDIS 	      |    CON REDIS          |
+ID TO TEST: 732 
+RANGE TO TEST: 0-735
+
+
+| 	      Prueba              |   SIN REDIS 	      |    CON REDIS          |
+|-----------------------------|-----------------------|-----------------------|
 | TEST EXIST ID 	          | 0.006963968276977539  |	0.00035953521728515625|
 | TEST GET HEROES IDS NAMES   |	0.010428667068481445  |	0.00020456314086914062|
 | TEST GET HERO 	          | 0.009013652801513672  |	0.00018215179443359375|
